@@ -1,0 +1,36 @@
+import javax.swing.JOptionPane;
+class Main {
+int cont = 0;
+public static void main(String[] args) {
+String pergunta1 = "Quantos braços tem um polvo?";
+String resposta1 = "8";
+String pergunta2 = "De quem é a famosa frase ‘Penso, logo existo’?";
+String resposta2 = "Descartes";
+String pergunta3 = "Quantas casas tem o número pi?";
+String resposta3 = "Infinitas";
+String pergunta4 = "Qual o número mínimo de jogadores em uma partida de futebol?i?";
+String resposta4 = "7";
+String pergunta5 = "Quanto tempo a luz do sol demora para chegar na terra?";
+String resposta5 = "8 minutos";
+Main m = new Main();
+m.pergunta(pergunta1, resposta1);
+m.pergunta(pergunta2, resposta2);
+m.pergunta(pergunta3, resposta3);
+m.pergunta(pergunta4, resposta4);
+m.pergunta(pergunta5, resposta5);
+m.exibeResultadoFinal();
+}
+public void pergunta(String pergunta, String respostaCorreta){
+String respostaUsuario = JOptionPane.showInputDialog(null, pergunta);
+if(respostaCorreta.equals(respostaUsuario)){
+JOptionPane.showMessageDialog(null, "Acertou!");
+cont ++;
+}
+else{
+JOptionPane.showMessageDialog(null, "Errou!");
+}
+}
+public void exibeResultadoFinal(){
+JOptionPane.showMessageDialog(null, "Você acertou "+cont+" questões!");
+}
+}
